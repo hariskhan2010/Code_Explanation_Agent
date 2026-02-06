@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Explanation Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Gemini 2.5 Flash</p>
+          <h1>Code Explanation Agent</h1>
+          <p class="lead">
+            Paste a small snippet and get a crisp, line-by-line explanation.
+          </p>
+        </div>
+        <div class="hero-badge">Green Mode</div>
+      </header>
+
+      <section class="card">
+        <div class="field">
+          <label for="code">Code snippet</label>
+          <textarea
+            id="code"
+            placeholder="e.g.\nfor (let i = 0; i < 3; i++) {\n  console.log(i);\n}"
+            spellcheck="false"
+          ></textarea>
+        </div>
+        <div class="actions">
+          <button id="explainBtn">Explain line-by-line</button>
+          <span id="status" role="status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section class="card output">
+        <div class="field">
+          <label for="result">Explanation</label>
+          <pre id="result"></pre>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Keep your API key in <code>.env</code> and never expose it to the browser.
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
